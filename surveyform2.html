@@ -1,0 +1,241 @@
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    body{
+      text-align:center;
+      margin: 0;
+      padding:0;
+      background: blue;
+      font-family: monospace;
+      
+      
+      
+    }
+    hr{
+        height: 1px;
+        background-color: aqua;
+    
+    }
+    
+    
+    #container{
+        margin-top: 15%;
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: red;
+        padding: 20px;
+        border-radius: 5px;
+        border: 5px solid;
+    }
+    
+        
+    label, p{
+        width: 100%;
+        float:left;
+        font-size: 20px;
+        text-align: left;
+        margin:0;
+    }
+    @media (max-width: 760px)
+    {
+        #container{
+            width: 500px;
+            line-height: 2;
+        }
+        label, p{
+        
+        font-size: 17px;
+        
+        }
+    
+    }
+    @media (max-width: 500px)
+    {
+        #container{
+            width: auto;
+        }
+        label, p{
+        
+        font-size: 15px;
+        
+        }
+    }
+    input,select{
+        margin-bottom: 30px;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 5px solid #fff;
+       
+        
+        
+    }
+    #description{
+        text-align: center;
+    }
+    .clue {
+      margin-left: 0.25rem;
+      font-size: 0.9rem;
+      color: #e4e4e4;
+    }
+    #survey-form{
+        line-height: 1.5;
+    }
+    .form-control{
+        display: block;
+        width:100%;
+        height:2.737rem;
+        background-clip: padding-box;
+    }
+    
+    [type='radio'], [type='checkbox']{
+        width:auto;
+        height:15px;
+        margin: 10px;
+        float:left;
+        border-radius: 5px;
+        border: 5px solid #fff;
+        
+    }
+    #submit{
+        width:100%;
+        height:3rem;
+        border-radius: 5px;
+        border: 5px solid #fff;
+        background-color: blueviolet;
+    }
+   
+    fieldset{
+        border: transparent;
+    }
+    textarea{
+      width:100%;
+      height: 7rem;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 5px solid #fff;
+    
+    }
+    
+    
+    </style>
+    
+    <div id="container">
+        <h1 id="title">survey form</h1>
+        <p id="description">Welcome to my webpage survey form</p><hr><br>
+        <form id="survey-form">
+            <fieldset>
+                <label id="name-label" for="name">Name</label>
+                <input 
+                id="name" 
+                type="text"
+                placeholder="Enter your name"
+                name="name"
+                required/>
+    
+                <label id="email-label" for="email">Email</label>
+                <input
+                id="email" 
+                type="email"
+                placeholder="Enter  your email"
+                name="email"
+                required
+                />
+                <label id="number-label" for="number"
+                >Age<span class="clue">(optional)</span>
+                </label>
+                <input
+                type="number"
+                name="age"
+                id="number"
+                min="10"
+                max="99"
+                class="form-control"
+                placeholder="Age"
+                />
+            </fieldset> 
+            <fieldset>   
+                <label>What is your favorite sport?</label>
+                <select id="dropdown" name="favorite-deport" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="baseball">Baseball</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <p>Would you ever practice sport?</p>
+                <label for="1">
+                <input
+                id="1"
+                name="user-recommend"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+                />Definitely</label>
+          
+                <label for="2">
+                <input
+                id="2"
+                name="user-recommend"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+                />Maybe</label>
+          
+    
+                <label for="3">
+                <input
+                id="3"
+                name="user-recommend"
+                value="not-sure"
+                type="radio"
+                class="input-radio"
+                />Not sure</label>
+            </fieldset>
+            <fieldset>
+                <p>Why do we play sports?</p>
+                <select id="dropdown" name="why" class="form-control" required>
+                    <option disabled selected value> Select a option</option>
+                    <option value="hobby">Hobby</option>
+                    <option value="health">Health</option>
+                    <option value="you-like-it">Because you like it</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                
+                <p>What do you think sport would help you?</p>
+                <label for="cardiovascular">
+                    <input id="cardiovascular" type="checkbox" value="cardiovascular health">Improve  cardiovascular health</label>
+                <label for="risk-of-heart">
+                    <input id="risk-of-heart" type="checkbox" value="risk-of-heart">Reduce your risk of heart disease, stroke, and diabetes.</label>
+                <label for="Help-weight">
+                        <input id="Help-weight" type="checkbox" value="Help-weight">Help you control your weight.</label>               
+                <label for="reduction-blood">
+                    <input id="reduction-blood" type="checkbox" value="reduction-blood">Reduction of blood pressure.</label>
+            </fieldset>
+            
+            <fieldset>
+              <p>Any comment or question</p>
+              <textarea
+              id="comments"
+              name="comment"
+              placeholder="Enter your Comment here"
+              ></textarea>
+            </fieldset>
+            <fieldset>
+              <button type="submit" id="submit">
+                Submit
+              </button>
+           </fieldset>
+        </form>
+    </div>
+      
